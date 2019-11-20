@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Car {
@@ -13,7 +14,7 @@ public class Car {
     private Integer id;
     @NotBlank(message = "Naming cannot be blank")
     private String naming;
-    @NotBlank(message = "Price cannot be blank")
+    @NotNull(message = "Price cannot be blank")
     private Float price;
 
     public Car() {}

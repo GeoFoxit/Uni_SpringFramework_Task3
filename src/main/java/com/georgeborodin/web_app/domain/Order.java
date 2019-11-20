@@ -5,15 +5,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity(name = "invoice")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @NotBlank(message = "Car id cannot be blank")
+    @NotNull(message = "Car id cannot be blank")
     private Integer carId;
-    @NotBlank(message = "Client id cannot be blank")
+    @NotNull(message = "Client id cannot be blank")
     private Integer clientId;
 
     public Order() {}
