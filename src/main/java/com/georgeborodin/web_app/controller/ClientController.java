@@ -30,7 +30,7 @@ public class ClientController {
             }
             return new ResponseEntity<Map<String,String>>(errorMap, HttpStatus.BAD_REQUEST);
         }
-        Client newClient = clientService.saveOrUpdateClient(client);
+        Client newClient = clientService.saveOrUpdate(client);
         return new ResponseEntity<Client>(newClient, HttpStatus.CREATED);
     }
 
