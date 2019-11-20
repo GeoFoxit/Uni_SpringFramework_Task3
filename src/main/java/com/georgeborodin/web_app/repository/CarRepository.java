@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CarRepository extends CrudRepository<Car,Integer> {
 
+    Car getById(Integer id);
+
 }
