@@ -11,7 +11,7 @@ public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
-    public Client saveOrUpdateClient(Client client) {
+    public Client saveOrUpdate(Client client) {
         return clientRepository.save(client);
     }
 
